@@ -28,15 +28,11 @@ fn dump_snippet<W: io::Write>(
     Ok(())
 }
 
-struct UnsafeAnalyzer {
-    // default_calls: RustcDefaultCalls,
-}
+struct UnsafeAnalyzer {}
 
 impl UnsafeAnalyzer {
     fn new() -> UnsafeAnalyzer {
-        UnsafeAnalyzer {
-            // default_calls: RustcDefaultCalls,
-        }
+        UnsafeAnalyzer {}
     }
 }
 
@@ -89,7 +85,7 @@ fn process_ast(state: &mut CompileState) {
         visitor.unsafe_nodes.len()
     );
 
-    // FIXME: Still missing trait impls?
+    // FIXME: Still missing unsafe trait impls?
 
     let codemap = state.session.codemap();
 
