@@ -1,7 +1,10 @@
 [package]
 name = "unsafety-dance"
 version = "0.1.0"
-authors = ["Marc Brinkmann <marc@49nord.de>"]
+authors = ["49nord GmbH <hello@49nord.de>"]
+license = "mit"
+description = "CLI tool to list all places with unsafe code in a crate."
+repository = "https://github.com/49nord/unsafety-dance-rs"
 
 [dependencies]
 ansi_term = "0.11.0"
