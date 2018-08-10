@@ -15,7 +15,7 @@ use ansi_term::Colour::Yellow;
 use getopts::Matches;
 use rustc::session::Session;
 use rustc_driver::driver::{CompileController, CompileState};
-use rustc_driver::{Compilation, CompilerCalls, RustcDefaultCalls};
+use rustc_driver::{Compilation, CompilerCalls};
 use syntax::{ast, codemap, visit};
 
 fn dump_snippet<W: io::Write>(
@@ -106,6 +106,5 @@ impl<'a> CompilerCalls<'a> for UnsafeAnalyzer {
 
 fn main() {
     let args: Vec<_> = env::args().collect();
-    let (compile_result, session) =
-        rustc_driver::run_compiler(&args, Box::new(UnsafeAnalyzer::new()), None, None);
+    rustc_driver::run_compiler(&args, Box::new(UnsafeAnalyzer::new()), None, None);
 }
