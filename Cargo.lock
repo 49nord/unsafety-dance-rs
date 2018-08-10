@@ -7,7 +7,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "unsafety_dance"
+name = "unsafety-dance"
 version = "0.1.0"
 dependencies = [
  "ansi_term 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
