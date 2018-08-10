@@ -1,0 +1,7 @@
+[package]
+name = "unsafety-dance"
+version = "0.1.0"
+authors = ["Marc Brinkmann <marc@49nord.de>"]
+
+[dependencies]
+ansi_term = "0.11.0"
